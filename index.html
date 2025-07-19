@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GM Auto Detailing Booking</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <img src="/static/logo.png" alt="Logo" width="150">
+    <h1>GM Auto Detailing Booking</h1>
+    <form method="post">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="phone" placeholder="Phone" required>
+        <input type="text" name="postcode" placeholder="Postcode" required>
+        <select name="service" required>
+            <option value="Exterior Detail">Exterior Detail</option>
+            <option value="Standard Detail">Standard Detail</option>
+            <option value="Full Detail">Full Detail</option>
+        </select>
+        <input type="date" name="date" required>
+        <select name="time" required>
+            <option>09:00</option>
+            <option>10:30</option>
+            <option>13:00</option>
+            <option>15:30</option>
+        </select>
+        <button type="submit">Book</button>
+    </form>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
